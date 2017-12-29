@@ -37,6 +37,20 @@
 |email|需要重置密码的邮箱|guoshencheng1@gmail.com|
 
 
+### 重置密码
+
+请求路径: `/authentication/passwordreset`</br>
+请求类型: put</br>
+
+请求体(body):
+
+请求体被放置在`passwordreset`中，passwordreset是一个数组，但是数组中只有一个元素，元素的字段如下
+
+|字段|说明|例子|
+|-|-|-|
+|token|从邮箱点击链接之后会带上一个token，需要在修改密码的时候带上这个token|xxxxxxxxxxxxxxxx|
+|newPassword|新的密码|123456|
+|ne2Password|新的密码的第二次输入值|123456|
 
 
 post `/authentication/passwordreset`  private
