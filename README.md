@@ -23,6 +23,21 @@
 |client_id|数据库中存储的，可以从数据库中查看|xxxxx|
 |client_secret|数据库中存储的，可以从数据库中查看|xxxxx|
 
+### 发送邮件重置密码
+
+请求路径: `/authentication/passwordreset`</br>
+请求类型: post</br>
+
+请求体(body):
+
+请求体被放置在`passwordreset`中，passwordreset是一个数组，但是数组中只有一个元素，元素的字段如下
+
+|字段|说明|例子|
+|-|-|-|
+|email|需要重置密码的邮箱|guoshencheng1@gmail.com|
+
+
+
 
 post `/authentication/passwordreset`  private
 put `/authentication/passwordreset` private
