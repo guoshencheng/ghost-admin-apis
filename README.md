@@ -23,7 +23,7 @@
 |client_id|数据库中存储的，可以从数据库中查看|xxxxx|
 |client_secret|数据库中存储的，可以从数据库中查看|xxxxx|
 
-### 发送邮件重置密码
+### 发送重置密码邮件
 
 请求路径: `/authentication/passwordreset`</br>
 请求类型: post</br>
@@ -53,10 +53,33 @@
 |ne2Password|新的密码的第二次输入值|123456|
 
 
-post `/authentication/passwordreset`  private
-put `/authentication/passwordreset` private
-post `/authentication/invitation` private
-get `/authentication/invitation` private
+### 接受邀请
+
+请求路径: `/authentication/invitation`</br>
+请求类型: post</br>
+
+请求体(body):
+
+请求体被放置在`invitation`中，invitation是一个数组，但是数组中只有一个元素，元素的字段如下
+
+|字段|说明|例子|
+|-|-|-|
+|token|从邮箱点击链接之后会带上一个token，在接受邀请的时候需要带上|xxxxxxxxxxxxxxxx|
+|password|密码|123456|
+|email|邮箱|guoshencheng1@gmail.com|
+|name|用户名|guoshencheng|
+
+### 查看邀请状态
+
+请求路径: `/authentication/invitation`</br>
+请求类型: get</br>
+
+query:
+
+|字段|说明|例子|
+|-|-|-|
+|email|邮箱|guoshencheng1@gmail.com|
+
 post `/authentication/setup` private
 get `/authentication/setup` private
 put `/authentication/setup` private
