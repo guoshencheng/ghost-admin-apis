@@ -201,12 +201,12 @@ query:
 |-|-|-|
 |include|额外的字段|`tag`|
 
-请求体：
+请求体，放置在posts字段中，posts是一个数组，数据放置在第一个对象中：
 
 |字段|说明|例子|
 |-|-|-|
 |title|标题|标题|
-|slug|不明|123|
+|slug|汉子转拼音|han-zi-zhuang-ping-yin|
 |published_by|发布者id|1|
 |author|作者id|1|
 |featured|不明|true|
@@ -231,7 +231,14 @@ params:
 |id|博客的id|4|
 
 
-get `/posts/slug/:slug` public
+### 更新博客
+
+请求路径: `/posts`</br>
+请求类型: put</br>
+请求体：
+
+和创建博客相同，多加上一个id字段
+
 put `/posts/:id` private
 delete `/posts/:id` private
 
