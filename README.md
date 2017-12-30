@@ -249,15 +249,28 @@ params:
 请求类型: delete</br>
 请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
 
-### 获取一些存储在数据库中的设置
+### 获取所有存储在数据库中的设置
 
 请求路径: `/settings`</br>
 请求类型: get</br>
 请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
 
-get `/settings` private
-get `/settings/:key` private
-put `/settings` private
+### 获取存储在数据库中的某个设置
+
+请求路径: `/settings/:key`</br>
+请求类型: get</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
+
+### 更新存储在数据库中的某个设置
+
+请求路径: `/settings`</br>
+请求类型: put</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
+请求体：
+
+|字段|说明|例子|
+|-|-|-|
+|settings|需要更新的设置的数组|`[{ id:xx, key: 'xxx' }]`|
 
 get `/users` public
 get `/users/:id` public
