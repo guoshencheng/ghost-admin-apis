@@ -110,7 +110,7 @@ query:
 
 请求路径: `/authentication/configuration`</br>
 请求类型: get</br>
-头部：[请查看私有权限api头部规范](#登陆头部校验)
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
 
 返回例子：
 
@@ -156,7 +156,7 @@ query:
 
 请求路径: `/authentication/configuration/:key`</br>
 请求类型: get</br>
-头部：[请查看私有权限api头部规范](#登陆头部校验)
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
 
 参数
 
@@ -194,6 +194,7 @@ query:
 
 请求路径: `/posts`</br>
 请求类型: post</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
 
 query:
 
@@ -223,6 +224,7 @@ query:
 
 请求路径: `/posts/:id`</br>
 请求类型: get</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
 
 params:
 
@@ -235,11 +237,18 @@ params:
 
 请求路径: `/posts`</br>
 请求类型: put</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
 请求体：
 
 和创建博客相同，多加上一个id字段
 
-put `/posts/:id` private
+
+### 删除博客
+
+请求路径: `/posts/:id`</br>
+请求类型: delete</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
+
 delete `/posts/:id` private
 
 get `/settings` private
