@@ -249,7 +249,11 @@ params:
 请求类型: delete</br>
 请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
 
-delete `/posts/:id` private
+### 获取一些存储在数据库中的设置
+
+请求路径: `/settings`</br>
+请求类型: get</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
 
 get `/settings` private
 get `/settings/:key` private
