@@ -2,6 +2,14 @@
 
 前缀一般为 `/ghost/api/v0.1/`
 
+请求分为两种，一种是公开的，一种是私有的，公开的接口可以直接访问，但是私有的接口需要添加一些表示登陆的凭着，登陆请求头如下
+
+##### 登陆头部校验
+
+|字段|说明|例子|
+|-|-|-|
+|authorization|登陆校验请求头，使用`Bearer <token>`的组合，token是使用登陆请求之后的返回值accesstoken|`Bearer AUll3lBzmZK89bJqtJuQEA17K1LEgKnVNVJlFcuyE238A57z5Qsy4eL6wTSerrVUkqKsSOv2fSc4BGrcCdR8aLT35m4yC23tTxrkzM55BV73MWKp3KGNzD46BSSmsd7Kt1i9dNg1IJcuBZhDl8sj4qdS13COpSF5EImhR9kgSeqJneeVMZhQvBDgdTPnZVwaJtl3ADXvEBaxlVPnErgIZRdQepsE8sY7F6YdNcm6ZqWsnOGXelYOoWal5yeifNn`|
+
 ### 登陆请求
 
 请求路径: `/authentication/token`</br>
@@ -80,9 +88,31 @@ query:
 |-|-|-|
 |email|邮箱|guoshencheng1@gmail.com|
 
-post `/authentication/setup` private
-get `/authentication/setup` private
-put `/authentication/setup` private
+### 查看是否激活了用户体系
+
+请求路径: `/authentication/setup`</br>
+请求类型: get</br>
+
+返回例子：
+
+```
+{
+  "setup": [
+    {
+      "status": true
+    }
+  ]
+}
+```
+
+
+### 查看是否激活了用户体系
+
+请求路径: `/authentication/configuration`</br>
+请求类型: get</br>
+头部：请查看私有权限api头部规
+
+返回例子：
 
 get `/configuration` private
 
@@ -136,3 +166,6 @@ post `/mail` private
 post `/mail/test` private
 
 post `/uploads` private
+
+post `/authentication/setup` private
+put `/authentication/setup` private
