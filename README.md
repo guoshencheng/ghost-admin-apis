@@ -175,7 +175,22 @@ query:
 }
 ```
 
-get `/posts` public
+### 获取所有的博客
+
+请求路径: `/authentication/posts`</br>
+请求类型: get</br>
+
+query:
+
+|字段|说明|例子|
+|-|-|-|
+|page|页码，从1开始|1|
+|limit|每一页的大小|20|
+|status|文章的状态|`published`|
+|tag|标签的id|1|
+
+
+
 post `/posts` private
 get `/posts/:id` public
 get `/posts/slug/:slug` public
