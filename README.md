@@ -219,9 +219,18 @@ query:
 |status|博客的状态|"draft"|
 |tags|博客的标签|[1]|
 
+### 获取博客信息
 
-post `/posts` private
-get `/posts/:id` public
+请求路径: `/posts/:id`</br>
+请求类型: get</br>
+
+params:
+
+|字段|说明|例子|
+|-|-|-|
+|id|博客的id|4|
+
+
 get `/posts/slug/:slug` public
 put `/posts/:id` private
 delete `/posts/:id` private
