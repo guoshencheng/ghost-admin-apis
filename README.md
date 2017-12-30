@@ -177,7 +177,7 @@ query:
 
 ### 获取所有的博客
 
-请求路径: `/authentication/posts`</br>
+请求路径: `/posts`</br>
 请求类型: get</br>
 
 query:
@@ -189,6 +189,35 @@ query:
 |status|文章的状态|`published`|
 |tag|标签的id|1|
 
+
+### 创建博客
+
+请求路径: `/posts`</br>
+请求类型: post</br>
+
+query:
+
+|字段|说明|例子|
+|-|-|-|
+|include|额外的字段|`tag`|
+
+请求体：
+
+|字段|说明|例子|
+|-|-|-|
+|title|标题|标题|
+|slug|不明|123|
+|published_by|发布者id|1|
+|author|作者id|1|
+|featured|不明|true|
+|image|首屏图片|xxx.xxx.xx/xx.png|
+|language|语言|zh_CN|
+|markdown|文章的内容|`## 文章的头部`|
+|meta_description|页面meta描述|`文章的描述`|
+|meta_title|页面meta标题|`文章的标题`|
+|page|不明|false|
+|status|博客的状态|"draft"|
+|tags|博客的标签|[1]|
 
 
 post `/posts` private
