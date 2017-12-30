@@ -110,7 +110,7 @@ query:
 
 请求路径: `/authentication/configuration`</br>
 请求类型: get</br>
-头部：请查看私有权限api头部规
+头部：[请查看私有权限api头部规范](#登陆头部校验)
 
 返回例子：
 
