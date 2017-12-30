@@ -95,7 +95,7 @@ query:
 
 返回例子：
 
-```
+```json
 {
   "setup": [
     {
@@ -106,7 +106,7 @@ query:
 ```
 
 
-### 查看是否激活了用户体系
+### 查看设置
 
 请求路径: `/authentication/configuration`</br>
 请求类型: get</br>
@@ -114,9 +114,66 @@ query:
 
 返回例子：
 
-get `/configuration` private
+```json
+{
+  "configuration": [{
+    "key": "fileStorage",
+    "value": true
+  }, {
+    "key": "publicAPI",
+    "value": false
+  }, {
+    "key": "apps",
+    "value": false
+  }, {
+    "key": "version",
+    "value": "0.7.4"
+  }, {
+    "key": "environment",
+    "value": "production"
+  }, {
+    "key": "database",
+    "value": "mysql"
+  }, {
+    "key": "mail"
+  }, {
+    "key": "blogUrl",
+    "value": ""
+  }, {
+    "key": "blogTitle",
+    "value": ""
+  }, {
+    "key": "routeKeywords",
+    "value": ""
+  }, {
+    "key": "storage",
+    "value": ""
+  }]
+}
+```
 
-get `/configuration/:key` private
+### 查看某项设置
+
+请求路径: `/authentication/configuration/:key`</br>
+请求类型: get</br>
+头部：[请查看私有权限api头部规范](#登陆头部校验)
+
+参数
+
+|字段|说明|例子|
+|-|-|-|
+|key|设置的字段名|`fileStorage`|
+
+返回例子：
+
+```json
+{
+  "configuration": [{
+    "key": "fileStorage",
+    "value": true
+  }]
+}
+```
 
 get `/posts` public
 post `/posts` private
