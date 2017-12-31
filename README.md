@@ -337,6 +337,13 @@ params:
 待补全...
 
 
+### 获取所有的角色
+
+请求路径: `/roles`</br>
+请求类型: get</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
+
+
 put `/users/:id` private
 post `/users` private
 
@@ -346,10 +353,6 @@ get `/tags/slug/:slug` public
 post `/tags` private
 put `/tags/:id` private
 delete `/tags/:id` private
-
-get `/roles/` private
-
-get `/clients/slug/:slug` public
 
 get `/slugs/:type/:name` public
 
