@@ -325,8 +325,16 @@ params:
 |newPassword|新的密码|1234578|
 |ne2Password|确认的新的密码|1234578|
 
+### 修改用户信息
 
-### 修改所属
+请求路径: `/users/id`</br>
+请求类型: put</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
+请求体:
+
+字段都放置在users中，放置其对应数组的第一个对象，对象为user的普遍对象，可查看查询user的返回
+
+### 修改博客所属
 
 请求路径: `/users/owner`</br>
 请求类型: put</br>
@@ -352,8 +360,12 @@ params:
 请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
 
 
-put `/users/:id` private
-post `/users` private
+### 获取主题
+
+请求路径: `/themes`</br>
+请求类型: get</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
+
 
 get `/tags` public
 get `/tags/:id` public
@@ -363,9 +375,6 @@ put `/tags/:id` private
 delete `/tags/:id` private
 
 get `/slugs/:type/:name` public
-
-get `/themes` private
-put `/themes/:name` private
 
 get `/notifications` private
 post `/notifications` private
