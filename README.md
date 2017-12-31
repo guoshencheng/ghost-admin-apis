@@ -442,24 +442,26 @@ params:
 请求类型: delete</br>
 请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
 
-post `/tags` private
-put `/tags/:id` private
-delete `/tags/:id` private
+### 上传图片
+请求路径: `/uploads`</br>
+请求类型: post</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
+
+请求体（mutipart）:
+
+图片的字段名 uploadimage
+
 
 get `/slugs/:type/:name` public
 
 get `/notifications` private
-post `/notifications` private
-delete `/notifications/:id` private
 
-get `/db` private
-post `/db` private
-delete `/db` private
+post `/notifications` private
+
+delete `/notifications/:id` private
 
 post `/mail` private
 post `/mail/test` private
-
-post `/uploads` private
 
 post `/authentication/setup` private
 put `/authentication/setup` private
