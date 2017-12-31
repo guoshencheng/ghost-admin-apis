@@ -379,6 +379,11 @@ params:
 请求类型: get</br>
 请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
 
+### 获取所有标签
+
+请求路径: `/tags`</br>
+请求类型: get</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
 
 get `/tags` public
 get `/tags/:id` public
