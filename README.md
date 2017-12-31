@@ -385,6 +385,12 @@ params:
 请求类型: get</br>
 请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
 
+### 通过id获取某个标签
+
+请求路径: `/tags/:id`</br>
+请求类型: get</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
+
 get `/tags` public
 get `/tags/:id` public
 get `/tags/slug/:slug` public
