@@ -309,7 +309,22 @@ params:
 |-|-|-|
 |email|用户邮箱|guoshencheng1@gmail.com|
 
-put `/users/password` private
+### 修改密码
+
+请求路径: `/users/password`</br>
+请求类型: put</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
+请求体:
+
+字段都放置在password中，放置其对应数组的第一个对象
+
+|字段|说明|例子|
+|-|-|-|
+|user_id|用户id|1|
+|oldPassword|原先的密码|1234578|
+|newPassword|新的密码|1234578|
+|ne2Password|确认的新的密码|1234578|
+
 put `/users/owner` private
 put `/users/:id` private
 post `/users` private
