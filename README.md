@@ -19,7 +19,7 @@
 |字段|说明|🌰|
 |-|-|-|
 |Content-Type|请求体的类型|`application/json`|
-|origin|请求来源，同源策略，不同源ghost会返回错误|https://blog.maihaoche.com|
+|origin|请求来源，同源策略，不同源ghost会返回错误|https://xxx.xxxx.xxxx|
 
 请求体(body):
 
