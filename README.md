@@ -343,6 +343,14 @@ params:
 请求类型: get</br>
 请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
 
+### 获取登陆的client信息
+
+> 用于登陆时使用，默认的slug有ghost-frontend，ghost-admin
+
+请求路径: `/clients/slug/:slug`</br>
+请求类型: get</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
+
 
 put `/users/:id` private
 post `/users` private
