@@ -397,7 +397,23 @@ params:
 请求类型: get</br>
 请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
 
-get `/tags/slug/:slug` public
+### 创建tag
+
+请求路径: `/tags`</br>
+请求类型: post</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
+请求体:
+
+|字段|说明|例子|
+|-|-|-|
+|name|标签名|新增标签|
+|slug|标签名的英文字符化|xin-zeng-biao-qian|
+|description|描述|xxxxxxxxxxxxxx|
+|meta_title|seo标题|xxxxxxxxxxxxxx|
+|meta_description|seo描述|xxxxxxxxxxxxxx|
+|image|封面图|xxx.xx.xx/xx.png|
+|hidden|是否隐藏|false|
+
 post `/tags` private
 put `/tags/:id` private
 delete `/tags/:id` private
