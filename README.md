@@ -414,6 +414,12 @@ params:
 |image|封面图|xxx.xx.xx/xx.png|
 |hidden|是否隐藏|false|
 
+### 删除标签
+
+请求路径: `/tags/:id`</br>
+请求类型: delete</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
+
 post `/tags` private
 put `/tags/:id` private
 delete `/tags/:id` private
