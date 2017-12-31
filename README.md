@@ -325,7 +325,18 @@ params:
 |newPassword|新的密码|1234578|
 |ne2Password|确认的新的密码|1234578|
 
-put `/users/owner` private
+
+### 修改所属
+
+请求路径: `/users/owner`</br>
+请求类型: put</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
+
+请求体：
+
+待补全...
+
+
 put `/users/:id` private
 post `/users` private
 
