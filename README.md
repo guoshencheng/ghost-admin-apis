@@ -272,10 +272,43 @@ params:
 |-|-|-|
 |settings|需要更新的设置的数组|`[{ id:xx, key: 'xxx' }]`|
 
-get `/users` public
-get `/users/:id` public
-get `/users/slug/:slug` public
-get `/users/email/:email` public
+
+### 获取所有用户
+
+请求路径: `/users`</br>
+请求类型: get</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
+query:
+
+|字段|说明|例子|
+|-|-|-|
+|page|页码|1|
+|limit|每一页的大小|20|
+|status|状态|`active`, `warn-1`|
+
+
+### 获取某个用户
+
+请求路径: `/users/:id`</br>
+请求类型: get</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
+params:
+
+|字段|说明|例子|
+|-|-|-|
+|id|用户id|1|
+
+### 通过邮箱获取某个用户
+
+请求路径: `/users/email/:email`</br>
+请求类型: get</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
+params:
+
+|字段|说明|例子|
+|-|-|-|
+|email|用户邮箱|guoshencheng1@gmail.com|
+
 put `/users/password` private
 put `/users/owner` private
 put `/users/:id` private
