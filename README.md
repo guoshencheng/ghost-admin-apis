@@ -391,8 +391,12 @@ params:
 请求类型: get</br>
 请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
 
-get `/tags` public
-get `/tags/:id` public
+### 通过slug来获取某个标签
+
+请求路径: `/tags/slug/:slug`</br>
+请求类型: get</br>
+请求头：[请查看私有权限api头部规范](#登陆头部校验)</br>
+
 get `/tags/slug/:slug` public
 post `/tags` private
 put `/tags/:id` private
